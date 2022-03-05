@@ -23,14 +23,26 @@ Finite Volume Simulations in formats used by some visualization programs.
 
 This package is part of external Octave-Forge collection.
 
+%files
+%license COPYING
+%doc NEWS
+%dir %{octpkgdir}
+%{octpkgdir}/*
+
+#---------------------------------------------------------------------------
+
 %prep
-%setup -qcT
+%autosetup -n %{octpkg}
 
 %build
-%octave_pkg_build -T
+%set_build_flags
+%octave_pkg_build
 
 %install
 %octave_pkg_install
+
+%check
+%octave_pkg_check
 
 %post
 %octave_cmd pkg rebuild
@@ -40,10 +52,4 @@ This package is part of external Octave-Forge collection.
 
 %postun
 %octave_cmd pkg rebuild
-
-%files
-%dir %{octpkgdir}
-%{octpkgdir}/*
-%doc %{octpkg}/NEWS
-%doc %{octpkg}/COPYING
 
