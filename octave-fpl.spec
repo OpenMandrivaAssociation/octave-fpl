@@ -4,10 +4,10 @@ Summary:	Octave support for various graphical formats
 Name:		octave-%{octpkg}
 Version:	1.3.5
 Release:	1
-Source0:	http://downloads.sourceforge.net/octave/%{octpkg}-%{version}.tar.gz
+Source0:	https://downloads.sourceforge.net/octave/%{octpkg}-%{version}.tar.gz
 License:	GPLv3+
 Group:		Sciences/Mathematics
-Url:		https://octave.sourceforge.io/%{octpkg}/
+Url:		https://packages.octave.org/%{octpkg}/
 BuildArch:	noarch
 
 BuildRequires:	octave-devel >= 3.2.3
@@ -20,8 +20,6 @@ Requires(postun): octave
 %description
 Collection of Octave routines to export data produced by Finite Elements or
 Finite Volume Simulations in formats used by some visualization programs.
-
-This package is part of external Octave-Forge collection.
 
 %files
 %license COPYING
