@@ -1,25 +1,27 @@
-%define octpkg fpl
+%global octpkg fpl
 
 Summary:	Octave support for various graphical formats
-Name:		octave-%{octpkg}
+Name:		octave-fpl
 Version:	1.3.5
-Release:	1
-Source0:	https://downloads.sourceforge.net/octave/%{octpkg}-%{version}.tar.gz
+Release:	2
 License:	GPLv3+
 Group:		Sciences/Mathematics
-Url:		https://packages.octave.org/%{octpkg}/
-BuildArch:	noarch
+Url:		https://packages.octave.org/fpl/
+Source0:	https://downloads.sourceforge.net/octave/fpl-%{version}.tar.gz
 
-BuildRequires:	octave-devel >= 3.2.3
+BuildRequires:  octave-devel >= 3.2.3
 
 Requires:	octave(api) = %{octave_api}
 
 Requires(post): octave
 Requires(postun): octave
 
+BuildArch:	noarch
+
 %description
-Collection of Octave routines to export data produced by Finite Elements or
-Finite Volume Simulations in formats used by some visualization programs.
+Collection of routines to export data produced by Finite Elements or
+Finite Volume Simulations in formats used by some visualization
+programs.
 
 %files
 %license COPYING
@@ -30,10 +32,9 @@ Finite Volume Simulations in formats used by some visualization programs.
 #---------------------------------------------------------------------------
 
 %prep
-%autosetup -n %{octpkg}
+%autosetup -p1 -n %{octpkg}
 
 %build
-%set_build_flags
 %octave_pkg_build
 
 %install
