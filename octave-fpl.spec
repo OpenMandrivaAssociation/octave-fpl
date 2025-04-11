@@ -3,7 +3,7 @@
 Summary:	Octave support for various graphical formats
 Name:		octave-fpl
 Version:	1.3.5
-Release:	2
+Release:	3
 License:	GPLv3+
 Group:		Sciences/Mathematics
 Url:		https://packages.octave.org/fpl/
